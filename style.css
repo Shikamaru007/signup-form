@@ -22,14 +22,15 @@ h1 {
     color: white;
 }
 article p {
-    font-weight:400;
+    font-weight:500;
     line-height: 1.7;
+    padding: .5rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 article {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    display: none;
 }
 .container {
     text-align: center;
@@ -45,7 +46,7 @@ article {
     font-weight: 400;
     border-radius: 10px;
     margin-bottom: 1.5rem;
-    display: none;
+    box-shadow: 0 8px hsla(270, 3%, 15%, 0.2);
 }
 .label span {
     font-weight: 600;
@@ -54,11 +55,12 @@ article {
 .form {
     background-color: white;
     color: black;
-    padding: 1.3rem;
+    padding: 1.35rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    box-shadow: 0 8px hsla(270, 3%, 15%, 0.2);
 }
  .form input {
     width: 100%;
@@ -67,6 +69,7 @@ article {
     border-radius: 5px;
     border: 1px solid rgba(128, 128, 128, 0.4);
     font-size: 1rem;
+    color: hsl(249, 10%, 26%);
  }
  .form input::placeholder {
     font-weight: 700;
@@ -74,5 +77,22 @@ article {
  }
  .form button {
     border: none;
+    padding: 1.2rem;
+    font-family: inherit;
+    font-weight: 500;
+    background-color:  hsl(154, 59%, 51%);
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    box-shadow: 0 5px hsla(154, 61%, 33%, 0.794);
  }
- 
+ .form p{
+    color: hsl(246, 25%, 77%);
+    font-size: .75rem;
+    padding-inline: 1rem;
+ } 
+ .form p span {
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+ }
