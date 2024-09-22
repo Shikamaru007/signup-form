@@ -17,10 +17,31 @@
                 <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
             </div>
                 <form action="" method="post" class="form" id="form">
-                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
-                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
-                    <input type="text" name="email" id="email" placeholder="Email Address">
-                    <input type="password" name="password" id="password" placeholder="Password">
+
+                    <div class="inputs">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                        <img src="images/icon-error.svg" alt="error icon" class="errorImg">
+                        <span class="error-msg">First Name cannot be empty</span>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                        <img src="images/icon-error.svg" alt="error img" class="errorImg">
+                        <span class="error-msg">Last Name cannot be empty</span>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="text" name="email" id="email" placeholder="Email Address">
+                        <img src="images/icon-error.svg" alt="error-img" class="errorImg">
+                        <span class="error-msg">Looks like this is not an email</span>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <img src="images/icon-error.svg" alt="" class="errorImg">
+                        <span class="error-msg">Password cannot be empty</span>
+                    </div>
+
                     <button type="submit">CLAIM YOUR FREE TRIAL</button>
                     <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
                 </form>            

@@ -7,6 +7,7 @@
 body {
     font-family: poppins, sans-serif;
     background-image: url(images/bg-intro-mobile.png);
+    background-position: center;
     background-color: hsl(0, 100%, 74%);
     color: rgba(255, 255, 255, 0.85);   
     display: flex;
@@ -38,11 +39,12 @@ article {
     flex-direction: column;
     gap: 3rem;
     width: 90%;
+    max-width: 21.09375rem;
 }
 .label {
     width: 100%;
     background-color:  hsl(248, 32%, 49%);
-    padding: 1.5rem 5rem;
+    padding: 1.5rem 3.5rem;
     font-weight: 400;
     border-radius: 10px;
     margin-bottom: 1.5rem;
@@ -70,10 +72,24 @@ article {
     border: 1px solid rgba(128, 128, 128, 0.4);
     font-size: 1rem;
     color: hsl(249, 10%, 26%);
+    position: relative;
  }
+ .form input::before {
+    content: url(images/icon-error.svg);
+    right: 2px;
+    top: 2px;
+    width: 1rem;
+    height: 1rem;
+    margin: auto;
+ }
+
  .form input::placeholder {
     font-weight: 700;
     font-size: 1rem;
+    color: hsla(249, 10%, 26%, 0.6);
+ }
+ .form input:focus {
+   outline: 1.5px solid hsla(270, 13%, 27%, 0.15);
  }
  .form button {
     border: none;
@@ -95,4 +111,131 @@ article {
  .form p span {
     color: hsl(0, 100%, 74%);
     font-weight: 700;
+ }
+ .inputs {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+ }
+ .inputs.error input {
+   border: 1px solid hsl(0, 98%, 51%);
+ }
+ .inputs .errorImg {
+   width: 1.2rem;
+   position: absolute;
+   margin: auto;
+   right: 15px;
+   top: 0;
+   bottom: 20%;
+   display: none;
+ }
+ .inputs.error .errorImg{
+   display: block;
+ }
+ .inputs .error-msg {
+   align-self: end;
+   font-size: .8rem;
+   font-style: italic;
+   color: hsl(0, 100%, 74%);
+   line-height: 1.55;
+   display: none;
+ }
+ .inputs.error .error-msg {
+   display: block;
+ }
+ .inputs.error #email::placeholder{
+   color: hsl(0, 100%, 74%);
+ }
+
+
+ @media screen and (min-width:767px){
+   .container {
+      max-width: 25rem;
+   }
+ }
+
+
+ @media screen and (min-width:1023px){
+   body {
+      padding: 0;
+      height: 100vh;
+   }
+   .container {
+      max-width: 57.599625rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+   .left {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+   }
+   h1 {
+      font-size: 2.5rem;
+   }
+   .label {
+      padding: 1rem 0;
+   }
+ }
+
+
+
+ @media screen and (min-width:1439px){
+   .container {
+      max-width: 72rem;
+   }
+   h1 {
+      font-size: 3.5rem;
+   }
+   .form {
+      padding: 3rem;
+      gap: 1.2rem;
+   }
+   article {
+      padding: 1rem;
+      gap: 1rem;
+      
+   }
+   article p {
+      color: rgba(255, 255, 255, 0.85);
+   }
+   
+ }
+
+
+ @media screen and (min-width:2106px){
+   html {
+      font-size: 18px;
+   }
+   .container {
+      max-width: 93.8rem;
+   }
+   h1 {
+      font-size: 4.5rem;
+   }
+   .form input {
+      font-size: 1.5rem;
+      align-items: center;
+      padding: 1.5rem;
+   }
+   .form {
+      padding: 4rem;
+      gap: 1.5rem;
+   }
+   article {
+      padding: 1rem;
+      
+   }
+   article p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.3rem;
+   }
+   .inputs .errorImg {
+      margin-right: 25px;
+      width: 1.7rem;
+   }
+   .inputs .error-msg {
+      font-size: 1.2rem;
+   }
+   
  }
